@@ -56,12 +56,19 @@
   <ItemGroup>
     <Compile Include="Context\AuthContext.cs" />
     <Compile Include="Context\AuthRepository.cs" />
+    <Compile Include="Contract\IGenericReposiotry.cs" />
     <Compile Include="Contract\IStudentrepository.cs" />
+    <Compile Include="Implementation\GenericRepository.cs" />
     <Compile Include="Implementation\StudentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\UserModel.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\App.Domain.Model\App.Domain.Model.csproj">
+      <Project>{693DF4A4-40AB-4B7E-8DF5-29BB74E3947C}</Project>
+      <Name>App.Domain.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
