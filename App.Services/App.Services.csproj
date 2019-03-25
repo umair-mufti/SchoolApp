@@ -50,6 +50,10 @@
       <Project>{693df4a4-40ab-4b7e-8df5-29bb74e3947c}</Project>
       <Name>App.Domain.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\App.Repository\App.Repository.csproj">
+      <Project>{4087AD60-245E-4836-8B34-15904489587E}</Project>
+      <Name>App.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

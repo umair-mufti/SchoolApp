@@ -9,10 +9,10 @@ namespace SchoolApp.Repositories.Contract
 {
     public interface IStudentRepository
     {
-        IEnumerable<tbl_Student> GetStudents();
-        tbl_Student GetStudent(int id);
-        void CreateStudent(tbl_Student st);
-        void UpdateStudent(tbl_Student st);
+        IEnumerable<Student> GetStudents();
+        Student GetStudent(int id);
+        void CreateStudent(Student st);
+        void UpdateStudent(Student st);
         void DeleteStudent(int id);
     }
 }

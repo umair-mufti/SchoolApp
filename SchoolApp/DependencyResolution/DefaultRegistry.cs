@@ -16,8 +16,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace SchoolApp.DependencyResolution {
+    using App.Repository.Contract;
+    using App.Repository.Implementation;
     using App.Services.Contract;
     using App.Services.Implementation;
+    using SchoolApp.Domain;
+    using StructureMap;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
 	
@@ -27,11 +31,17 @@ namespace SchoolApp.DependencyResolution {
         public DefaultRegistry() {
             Scan(
                 scan => {
+                    scan.Assembly("App.Repository");
+                    scan.Assembly("App.Services");
                     scan.TheCallingAssembly();
                     scan.WithDefaultConventions();
-                    //scan.SingleImplementationsOfInterface();
+                    scan.SingleImplementationsOfInterface();
                 });
             For<IStudentService>().Use<StudentService>();
+            //For<IStudentRepository>().Use<StudentRepository>();
+            For(typeof(IRepository)).Use(typeof(Repository<DBContext>));
+            For(typeof(IReadOnlyRepository)).Use(typeof(ReadOnlyRepository<DBContext>));
+            
         }
 
         #endregion

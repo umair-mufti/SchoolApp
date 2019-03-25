@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Repository", "App.Repos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Auth", "App.Auth\App.Auth.csproj", "{DAFF6619-3C04-437C-89B1-D8606CAB15C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Data", "App.Data\App.Data.csproj", "{CAB70969-267A-4C6D-A19B-EB0F7BFA595A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DAFF6619-3C04-437C-89B1-D8606CAB15C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAFF6619-3C04-437C-89B1-D8606CAB15C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAFF6619-3C04-437C-89B1-D8606CAB15C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB70969-267A-4C6D-A19B-EB0F7BFA595A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB70969-267A-4C6D-A19B-EB0F7BFA595A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB70969-267A-4C6D-A19B-EB0F7BFA595A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB70969-267A-4C6D-A19B-EB0F7BFA595A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

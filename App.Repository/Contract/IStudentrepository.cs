@@ -9,6 +9,6 @@ namespace App.Repository.Contract
 {
     public interface IStudentRepository
     {
-        StudentModel GetStudents();
+        List<StudentModel> GetStudents();
     }
 }

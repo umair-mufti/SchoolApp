@@ -59,7 +59,7 @@ namespace SchoolApp
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromSeconds(20),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(1),
                 Provider = new AuthorizationServerProvider()
             };
 

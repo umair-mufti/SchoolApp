@@ -6,36 +6,40 @@ namespace SchoolApp.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Teacher")]
+    [Table("tbl_Teacher")]
     public partial class Teacher
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Teacher()
-        {
-            Classes = new HashSet<Class>();
-        }
-
+        [Key]
         public int TeacherId { get; set; }
 
+        [StringLength(250)]
         public string Qualification { get; set; }
 
-        public DateTime DateJoin { get; set; }
+        public DateTime? DateJoin { get; set; }
 
-        public DateTime DateReleave { get; set; }
+        public DateTime? DateReleave { get; set; }
 
+        [StringLength(100)]
         public string CurrentPosition { get; set; }
 
+        [StringLength(100)]
         public string WorkingHours { get; set; }
 
-        public string EmpployeeCode { get; set; }
+        [StringLength(100)]
+        public string EmployeeCode { get; set; }
 
-        public DateTime DateAdd { get; set; }
+        public int? TeacherClassId { get; set; }
 
-        public DateTime DateModified { get; set; }
+        public DateTime? DateAdded { get; set; }
 
-        public string Active { get; set; }
+        [StringLength(50)]
+        public string AddedBy { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Class> Classes { get; set; }
+        public DateTime? DateModified { get; set; }
+
+        [StringLength(10)]
+        public string ModifiedBy { get; set; }
+
+        public int? Active { get; set; }
     }
 }

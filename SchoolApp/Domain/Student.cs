@@ -7,7 +7,7 @@ namespace SchoolApp.Domain
     using System.Data.Entity.Spatial;
 
     [Table("tbl_Student")]
-    public partial class tbl_Student
+    public partial class Student
     {
         [Key]
         public int StudentId { get; set; }

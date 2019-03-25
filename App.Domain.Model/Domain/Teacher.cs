@@ -4,31 +4,31 @@ namespace SchoolApp.Domain
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+    
 
-    [Table("tbl_Class")]
-    public partial class tbl_Class
+    [Table("tbl_Teacher")]
+    public partial class Teacher
     {
         [Key]
-        public int ClassId { get; set; }
+        public int TeacherId { get; set; }
+
+        [StringLength(250)]
+        public string Qualification { get; set; }
+
+        public DateTime? DateJoin { get; set; }
+
+        public DateTime? DateReleave { get; set; }
 
         [StringLength(100)]
-        public string ClassName { get; set; }
+        public string CurrentPosition { get; set; }
 
         [StringLength(100)]
-        public string ClassCapacity { get; set; }
-
-        public DateTime? ClassStartingOn { get; set; }
+        public string WorkingHours { get; set; }
 
         [StringLength(100)]
-        public string ClassLocation { get; set; }
+        public string EmployeeCode { get; set; }
 
-        [StringLength(100)]
-        public string ClassNumber { get; set; }
-
-        public int? ClassTeacherId { get; set; }
-
-        public DateTime? ClassEndingOn { get; set; }
+        public int? TeacherClassId { get; set; }
 
         public DateTime? DateAdded { get; set; }
 

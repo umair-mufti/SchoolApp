@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\IEntity.cs" />
+    <Compile Include="Domain\Class.cs" />
+    <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Domain\Exam.cs" />
+    <Compile Include="Domain\Parent.cs" />
+    <Compile Include="Domain\Role.cs" />
+    <Compile Include="Domain\Student.cs" />
+    <Compile Include="Domain\StudentMarks.cs" />
+    <Compile Include="Domain\Subject.cs" />
+    <Compile Include="Domain\tbl_Class.cs" />
+    <Compile Include="Domain\Teacher.cs" />
+    <Compile Include="Domain\TimeTable.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserRole.cs" />
+    <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,14 +6,22 @@ namespace SchoolApp.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_Role
+    [Table("tbl_TimeTable")]
+    public partial class TimeTable
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int RoleId { get; set; }
+        public int TimeTableId { get; set; }
 
-        [StringLength(50)]
-        public string Role { get; set; }
+        [StringLength(100)]
+        public string TimeTableName { get; set; }
+
+        public DateTime? TimeTableStartDate { get; set; }
+
+        public DateTime? TimeTableEndDate { get; set; }
+
+        public int? ClassId { get; set; }
+
+        public int? TimeTableSubjectId { get; set; }
 
         public DateTime? DateAdded { get; set; }
 
@@ -22,7 +30,7 @@ namespace SchoolApp.Domain
 
         public DateTime? DateModified { get; set; }
 
-        [StringLength(50)]
+        [StringLength(10)]
         public string ModifiedBy { get; set; }
 
         public int? Active { get; set; }

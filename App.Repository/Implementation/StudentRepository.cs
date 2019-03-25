@@ -10,13 +10,15 @@ namespace App.Repository.Implementation
 {
     public class StudentRepository : IStudentRepository
     {
-        public StudentModel GetStudents()
+        public List<StudentModel> GetStudents()
         {
-            StudentModel model = new StudentModel();
+            List<StudentModel> students = new List<StudentModel>
+            {
+                new StudentModel { FirstName = "Umair", LastName = "Mufti" },
+                new StudentModel { FirstName = "Sikander", LastName = "Ahmed" }
+            };
 
-            model.FirstName = "Umair";
-
-            return model;
+            return students;
         }
     }
 }

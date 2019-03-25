@@ -4,9 +4,10 @@ namespace SchoolApp.Domain
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+    
 
-    public partial class tbl_TimeTable
+    [Table("tbl_TimeTable")]
+    public partial class TimeTable
     {
         [Key]
         public int TimeTableId { get; set; }

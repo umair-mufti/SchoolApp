@@ -6,7 +6,8 @@ namespace SchoolApp.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_Subject
+    [Table("tbl_Subject")]
+    public partial class Subject
     {
         [Key]
         public int SubjectId { get; set; }

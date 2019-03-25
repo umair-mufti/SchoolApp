@@ -21,8 +21,9 @@ namespace SchoolApp.API
             this._studentService = studentService;
         }
 
-        
+
         [HttpGet]
+        [Route("all")]
         public IHttpActionResult Get()
         {
             var Students = _studentService.GetStudents();

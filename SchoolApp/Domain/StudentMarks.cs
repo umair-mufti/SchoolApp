@@ -6,14 +6,23 @@ namespace SchoolApp.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_UserRole
+    [Table("tbl_StudentMarks")]
+    public partial class StudentMarks
     {
         [Key]
-        public int UserRoleId { get; set; }
+        public int StudentMarksId { get; set; }
 
-        public int? UserId { get; set; }
+        public int? StudentId { get; set; }
 
-        public int? RoleId { get; set; }
+        public int? ClassId { get; set; }
+
+        public int? ExamId { get; set; }
+
+        public int? SubjectId { get; set; }
+
+        public int? MarksObtain { get; set; }
+
+        public int? OutOfMarks { get; set; }
 
         public DateTime? DateAdded { get; set; }
 
@@ -22,7 +31,7 @@ namespace SchoolApp.Domain
 
         public DateTime? DateModified { get; set; }
 
-        [StringLength(50)]
+        [StringLength(10)]
         public string ModifiedBy { get; set; }
 
         public int? Active { get; set; }
